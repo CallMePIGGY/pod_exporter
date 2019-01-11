@@ -83,8 +83,8 @@ if __name__ == '__main__':
     # Start up the server to expose metrics.
     prom.start_http_server(9183)
     t0_value = 50
-    #url = 'http://localhost:10255/stats/summary'
-    url = 'http://172.168.88.137:10255/stats/summary'
+    url = 'http://localhost:10255/stats/summary'
+    # url = 'http://172.168.88.137:10255/stats/summary'
     tasks = [loop.create_task(compute_rate(url))]
     try:
         loop.run_forever()
